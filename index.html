@@ -868,6 +868,41 @@
             color: var(--text-primary);
             font-size: calc(0.95em * var(--font-size-scale));
         }
+
+        /* ============================================
+           FOOTER DO GRUPO
+           ============================================ */
+        .group-footer {
+            margin-top: 28px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            color: var(--text-secondary);
+            font-size: calc(0.95em * var(--font-size-scale));
+        }
+
+        .group-footer .group-name {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .group-footer .group-credit {
+            font-size: calc(0.9em * var(--font-size-scale));
+            color: var(--text-secondary);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 480px) {
+            .group-footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 6px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1123,6 +1158,14 @@
                     Refazer Quiz
                 </button>
             </div>
+            <!-- Footer com o nome do grupo (placeholder fácil de editar) -->
+            <footer class="group-footer" role="contentinfo" aria-label="Informações do grupo">
+                <div class="group-meta">
+                    <span class="group-name" id="groupName">Grupo: Nome do Grupo</span>
+                    <span class="group-year" aria-hidden="true">• 2025</span>
+                </div>
+                <div class="group-credit" aria-hidden="true">Criado com ❤️ pela equipe</div>
+            </footer>
         </div>
     </div>
 
